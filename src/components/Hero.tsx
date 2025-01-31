@@ -179,7 +179,7 @@ const Hero = ({
             </div>
           </div>
         </div>
-        <div className="max-w-7xl mx-auto text-center relative z-50">
+        <div className="max-w-7xl mx-auto text-center relative z-20">
           <h1
             id="main-header"
             className="text-5xl sm:text-6xl lg:text-[92px] font-extrabold leading-tight mb-8"

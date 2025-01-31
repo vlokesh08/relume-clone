@@ -17,9 +17,9 @@ const Generate = () => {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
               placeholder="Describe a company in a sentence or two..."
-              className="flex-1 px-4 py-3 text-gray-600 placeholder-gray-400 bg-transparent border-none focus:outline-none text-lg"
+              className="flex-1 px-4 py-3 text-gray-600 placeholder-gray-400 bg-transparent border-none focus:outline-none text-sm sm:text-base md:text-lg w-full"
             />
-            <button className="flex items-center gap-2 px-6 py-3 bg-[#6C63FF] hover:bg-[#5B54FF] text-white rounded-xl font-medium transition-colors duration-200">
+            <button className="flex w-full sm:w-[220px] justify-center items-center gap-2 px-6 py-3 bg-[#6C63FF] hover:bg-[#5B54FF] text-white rounded-xl font-medium transition-colors duration-200">
               <Sparkles className="w-4 h-4" />
               Generate
             </button>

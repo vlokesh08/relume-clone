@@ -31,17 +31,17 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Dropdown */}
-        <div className={`${isOpen ? 'flex' : 'hidden'} md:hidden absolute top-0 left-0 right-0 bg-white min-h-screen p-10 flex-col gap-8`}>
-          <div className="flex flex-col gap-8 mt-20 text-2xl">
-            <a href="#" className="hover:text-gray-600">Products</a>
-            <a href="#" className="hover:text-gray-600">Community</a>
-            <a href="#" className="hover:text-gray-600">Pricing</a>
-            <a href="#" className="hover:text-gray-600">Learn</a>
-            <a href="#" className="hover:text-gray-600">Contact Sales</a>
+        <div className={`${isOpen ? 'flex' : 'hidden'} md:hidden absolute top-20 left-4 right-4 bg-white p-8 flex-col gap-6  z-[999] rounded-2xl shadow-2xl border border-gray-100 max-h-[80vh] overflow-y-auto`}>
+          <div className="flex flex-col gap-6">
+            <a href="#" className="hover:text-gray-600 text-lg">Products</a>
+            <a href="#" className="hover:text-gray-600 text-lg">Community</a>
+            <a href="#" className="hover:text-gray-600 text-lg">Pricing</a>
+            <a href="#" className="hover:text-gray-600 text-lg">Learn</a>
+            <a href="#" className="hover:text-gray-600 text-lg">Contact Sales</a>
           </div>
-          <div className="flex flex-col gap-4 mt-auto">
-            <button className="hover:text-gray-600 text-xl">Log in</button>
-            <button className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 text-xl">
+          <div className="grid grid-cols-2 gap-4 pt-6 border-t border-gray-100">
+            <button className="hover:text-gray-600 text-lg border rounded-lg">Log in</button>
+            <button className="bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 text-lg">
               Start for free
             </button>
           </div>
