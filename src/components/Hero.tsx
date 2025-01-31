@@ -50,7 +50,7 @@ const Hero = ({
       {/* Bottom Connecting Line */}
       <div>
         <div
-          className="block absolute bottom-6 h-0.5 left-[10px] sm:left-[15px] md:left-[20px] lg:left-[25px] xl:left-[25px] right-[25px] sm:right-[15px] md:right-[20px] bg-blue-800 transition-all duration-500 -z-5"
+          className="block absolute bottom-6 h-0.5 left-[10px] sm:left-[15px] md:left-[20px] lg:left-[25px] xl:left-[25px] right-[15px] sm:right-[15px] md:right-[20px] bg-blue-800 transition-all duration-500 -z-5"
           style={{
             // left: "25px",
             // right: "25px",
@@ -80,8 +80,10 @@ const Hero = ({
       <img
         src="https://cdn.prod.website-files.com/6177739448baa66404ce1d9c/65949937d9baec1f85575645_cursor-jessica-yellow_3x.png"
         className={`absolute ${
-          isHovered ? "bottom-44 left-80" : "bottom-52 left-56"
-        } w-[69.5px] pointer-events-none z-20 transition-all duration-500 hidden lg:block`}
+          isHovered && window.innerWidth >= 768 
+            ? "bottom-32 sm:left-80 left-32" 
+            : "bottom-44 sm:left-56 left-24"
+        } w-[45px] sm:w-[69.5px] pointer-events-none z-20 transition-all duration-500 block`}
         alt="Mario Cursor"
         style={{
           transform:
@@ -90,8 +92,8 @@ const Hero = ({
         }}
       />
       <div
-        className=" lg:flex flex-col gap-4 absolute left-0 top-20 -translate-y-1/4 w-[300px] xl:w-[320px] transition-transform duration-500 px-8 z-10"
-        style={{ transform: `translateX(${isHovered ? "2.5rem" : "-1rem"})` }}
+        className="lg:flex flex-col gap-4 absolute left-0 top-20 -translate-y-1/4 w-[300px] xl:w-[320px] transition-transform duration-500 px-8 z-10"
+        style={{ transform: `translateX(${isHovered && window.innerWidth >= 768 ? "2.5rem" : "-1rem"})` }}
       >
         <div className="w-full -ml-[95%] md:-ml-[20%] rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform">
           <img
@@ -120,8 +122,10 @@ const Hero = ({
       <img
         src="https://cdn.prod.website-files.com/6177739448baa66404ce1d9c/659499374a9e7199f028b4f0_cursor-blue-mario_3x.png"
         className={`absolute ${
-          isHovered ? "top-32 right-80" : "top-44 right-56"
-        } w-[69.5px] pointer-events-none z-20 transition-all duration-500 hidden lg:block z-200`}
+          isHovered && window.innerWidth >= 768
+            ? "top-32 sm:right-80 right-32" 
+            : "top-44 sm:right-56 right-24"
+        } w-[45px] sm:w-[69.5px] pointer-events-none z-20 transition-all duration-500 block`}
         alt="Mario Cursor"
         style={{
           transform:
@@ -131,7 +135,7 @@ const Hero = ({
       />
       <div
         className=" lg:flex flex-col gap-4 absolute right-0 top-20 -translate-y-1/4 w-[300px] xl:w-[320px] transition-transform duration-500 px-8 z-10"
-        style={{ transform: `translateX(${isHovered ? "-2.5rem" : "1rem"})` }}
+        style={{ transform: `translateX(${isHovered && window.innerWidth >= 768  ? "-2.5rem" : "1rem"})` }}
       >
         <div className="w-full object-cover ml-[95%] md:ml-[20%] rounded-xl overflow-hidden shadow-xl transform hover:scale-105 transition-transform">
           <img
@@ -157,7 +161,7 @@ const Hero = ({
       </div>
 
       {/* Hero Content */}
-      <div className="flex flex-col justify-center align-center py-24 w-full px-4 z-20">
+      <div className="flex flex-col justify-center align-center py-16 md:py-24 w-full px-4 z-20">
         {/* User Stats */}
         <div className="flex justify-center px-2 overflow-x-auto">
           <div className="flex items-center justify-center gap-1 xs:gap-2 mb-8 z-20 border px-2 py-1 rounded-full whitespace-nowrap text-[10px] xs:text-xs sm:text-sm md:text-base">
@@ -182,13 +186,13 @@ const Hero = ({
         <div className="max-w-7xl mx-auto text-center relative z-20">
           <h1
             id="main-header"
-            className="text-5xl sm:text-6xl lg:text-[92px] font-extrabold leading-tight mb-8"
+            className="text-[56px] sm:max-w-lg lg:max-w-6xl sm:text-3xl md:text-2xl lg:text-[92px] font-extrabold leading-tight mb-8"
           >
             Websites designed &<br />
             built faster with AI
           </h1>
 
-          <p className="text-sm sm:text-base md:text-sm lg:text-xl text-gray-600 max-w-lg sm:max-w-96 md:max-w-xl lg:max-w-2xl mx-auto mb-12">
+          <p className="text-base font-medium sm:text-base md:text-sm lg:text-xl text-gray-600 max-w-sm sm:max-w-lg md:max-w-lg lg:max-w-2xl mx-auto mb-12">
             Use AI as your design ally, not as a replacement. Effortlessly
             generate sitemaps and wireframes for marketing websites in minutes.
           </p>
